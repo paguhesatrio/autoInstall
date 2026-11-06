@@ -23,7 +23,7 @@ goto cek_hasil
 :extract
 cd /d %TEMP%
 echo Mengunduh paket dari GitHub...
-curl -L -o "%TEMP%\khanza.zip" https://github.com/paguhesatrio/KhanzaAutoInstall/archive/refs/heads/main.zip || (echo Download gagal & pause & exit /b 1)
+curl -L -o "%TEMP%\khanza.zip" https://github.com/paguhesatrio/autoInstall/archive/refs/heads/main.zip || (echo Download gagal & pause & exit /b 1)
 tar -xf "%TEMP%\khanza.zip" -C C:\ || (echo Extract gagal & pause & exit /b 1)
 if exist C:\KhanzaAutoInstall rmdir /s /q C:\KhanzaAutoInstall
 ren C:\KhanzaAutoInstall-main KhanzaAutoInstall || (echo Ganti nama folder gagal & pause & exit /b 1)
